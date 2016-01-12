@@ -153,7 +153,7 @@ function initializeMap() {
       locations.push(job.location);
     });
 
-    
+      
     return locations;
   }
 

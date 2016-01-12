@@ -11,7 +11,7 @@ var bio = {
 	},
 	"welcomeMessage" : "Hi, I'm Matthew and I want to make cool things with cool people.",
 	"skills": [
-		"HTML/CSS", "JavaScript", "writing", "teaching", "sales"
+		"HTML/CSS - beginner", "JavaScript - beginner", "writing", "teaching", "sales"
 	],
 	"languages": [
 		"English - native", "Thai - upper intermediate", "German - functional"
@@ -104,7 +104,7 @@ var work = {
 	  	"dates" : "Feb 2000 - Dec 2002",
 	  	"location" : "San Francisco, CA",
 	  	"description" : "Was the 14th hire in this start-up (one of the few still standing from the .com days) and was instrumental in building the company’s Customer Service department; including helping to refine data collection and reporting processes, the creation of email templates, technical support Q & As, bug reporting procedures and acted as the main liaison between the CS department and the technical and Biz Dev departments."
-	},
+	}
   ]
 }
 
@@ -171,10 +171,22 @@ var education = {
     ],
     "onlineCourses": [
     {
-  		"title" : "JavaScript Crash Course",
+  		"title" : "Front-End Web Devoloper Nanodegree",
   		"school" : "Udacity",
-  		"dates" : "2016",
-  		"Url" : "https://www.udacity.com"
+  		"date" : "2016",
+  		"Url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
+  	},
+  	{
+  		"title" : "Command Line Essentials: Git Bash for Windows",
+  		"school" : "udemy",
+  		"date" : "2015",
+  		"Url" : "https://www.udemy.com/git-bash/learn/#/",
+  	},
+  	{
+  		"title" : "Build Websites from Scratch with HTML & CSS",
+  		"school" : "udemy",
+  		"date" : "2015",
+  		"Url" : "https://www.udemy.com/build-website-scratch/learn/#/",
   	}
   ]
 }
@@ -207,26 +219,26 @@ education.display ();
 
 // code online classes
 
-onlineClasses.display = function(){
+education.onlineCourses.display = function(){
 	$("#education").append(HTMLonlineClasses);
+
 	for (course in education.onlineCourses) {
-	$("#education").append(HTMLschoolStart);
-	
-	
+		$("#education").append(HTMLschoolStart);
+
 		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 		$(".education-entry:last").append(formattedonlineTitle);	
-		var formattedonlineSchool = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].school);
+		var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 		$(".education-entry:last").append(formattedonlineSchool);	
-		var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+		var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
 		$(".education-entry:last").append(formattedonlineDates);	
-		var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-		$(".education-entry:last").append(formattedonlineURL);	
+		var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].Url);
+		$(".education-entry:last").append(formattedonlineURL);
 
 	}
 }
 
 
-onlineClasses.display.display();
+education.onlineCourses.display();
 // end code line classes
 
 
@@ -257,21 +269,9 @@ onlineClasses.display.display();
 	 	"field": "Chinese History and Culture"
 	}
   ]
-}
+}*/
 
-furtherEducation.display = function(){
-	for (organization in furtherEducation.schools) {
-		$('#furtherEducation').append(HTMLfurtherEducationStart);
 
-		var formattedorganizationName = HTMLorganizationName.replace ("%data%", furtherEducation.schools[school].organization);	
-		$(".furtherEducation-entry:last").append(formattedorganizationName);
-		var formattedorganizationName = HTMLorganizationName.replace ("%data%", furtherEducation.schools[school].organization);	
-		$(".furtherEducation-entry:last").append(formattedorganizationName);
-	}
-		
-}
-
-furtherEducation.display ();*/
 
 
 
