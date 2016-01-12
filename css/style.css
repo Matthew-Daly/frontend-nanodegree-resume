@@ -47,7 +47,7 @@ h3 {
 }
 
 h4 {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 14px;
   color: #4a4a4a;
   line-height: 17px;
@@ -103,6 +103,8 @@ a {
   color: #f5ae23;
   display: none;
 }
+
+
 
 .orange {
   background-color: #f5ae23;

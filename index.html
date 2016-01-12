@@ -24,6 +24,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
 
+  <!-- Normalize to clean up & standardize the browser default styles: http://necolas.github.io/normalize.css/ -->
+  <link rel="stylesheet" href="css/normalize.css">
+
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -46,7 +49,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -72,7 +75,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <h2>Education</h2>
     </div>
     <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
+      <h2>Where I've Lived, Worked and Studied</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
       <h2 class="orange center-text">Let's Connect</h2>
@@ -132,7 +135,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('lets-connect').style.display = 'none';
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.background = 'black';
+      document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
 </body>
