@@ -174,19 +174,19 @@ var education = {
   		"title" : "Front-End Web Devoloper Nanodegree",
   		"school" : "Udacity",
   		"date" : "2016",
-  		"Url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
+  		"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
   	},
   	{
   		"title" : "Command Line Essentials: Git Bash for Windows",
   		"school" : "udemy",
   		"date" : "2015",
-  		"Url" : "https://www.udemy.com/git-bash/learn/#/",
+  		"url" : "https://www.udemy.com/git-bash/learn/#/",
   	},
   	{
   		"title" : "Build Websites from Scratch with HTML & CSS",
   		"school" : "udemy",
   		"date" : "2015",
-  		"Url" : "https://www.udemy.com/build-website-scratch/learn/#/",
+  		"url" : "https://www.udemy.com/build-website-scratch/learn/#/",
   	}
   ]
 }
@@ -231,8 +231,8 @@ education.onlineCourses.display = function(){
 		$(".education-entry:last").append(formattedonlineSchool);	
 		var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
 		$(".education-entry:last").append(formattedonlineDates);	
-		var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].Url);
-		$(".education-entry:last").append(formattedonlineURL);
+		var formattedOnlineurl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+		$(".education-entry:last").append(formattedOnlineurl);
 
 	}
 }
