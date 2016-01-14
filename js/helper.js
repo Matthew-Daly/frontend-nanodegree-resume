@@ -39,8 +39,8 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectDates = '<div class="date-text">%data% </div><br>';
+var HTMLprojectDescription = '<p class="pro-text">%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -65,7 +65,7 @@ var googleMap = '<div id="map"></div>';
 
 
 /*The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.*/
-/*Don't really like this feature, so am leaving out, but keeping the code incase it is 
+/*Don't really like this feature, so am leaving out, but keeping the code in case it is 
 required for the evaluation. 
 
 $(document).ready(function() {
