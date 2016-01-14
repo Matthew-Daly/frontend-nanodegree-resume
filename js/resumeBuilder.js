@@ -1,4 +1,6 @@
-// code for bio section
+'Use Strict';
+
+// Code for bio section
 var bio = {
 	"name" : "Matthew Daly",
 	"role" : "Web Developer",
@@ -11,12 +13,12 @@ var bio = {
 	},
 	"welcomeMessage" : "Hi, I'm Matthew and I want to make cool things with cool people.",
 	"skills": [
-		"HTML/CSS - beginner", "JavaScript - beginner", "writing", "teaching", "sales"
+		"HTML/CSS - beginner", "JavaScript - beginner", "writing", "teaching", "sales", "customer relations", "good understanding of SEO"
 	],
 	"languages": [
 		"English - native", "Thai - upper intermediate", "German - functional"
 	],
-	"biopic" : "images/Matt.jpg"
+	"biopic" : "images/Matt-flood.jpg"
 }	
 
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -59,6 +61,10 @@ if(bio.skills.length > 0) {
 	formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
 	$("#skills").append(formattedSkill);
 	formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[7]);
 	
 
 
@@ -72,13 +78,13 @@ if(bio.skills.length > 0) {
 	$("#languages").append(formattedLanguages);	
 }
 
-// end code for bio
+// End code for bio
 
-//code for work section
+//Code for work section
 var work = {
  "jobs": [
 	{
-	  	"employer" : "TripDonor/TravelGenie	",
+	  	"employer" : "TripDonor/TravelGenie",
 	  	"title" : "Content Manager",
 	  	"dates" : "Dec 2014 - Aug 2015",
 	  	"location" : "San Diego, California (though I worked remotely)",
@@ -106,7 +112,7 @@ var work = {
 	  	"description" : "Was the 14th hire in this start-up (one of the few still standing from the .com days) and was instrumental in building the company’s Customer Service department; including helping to refine data collection and reporting processes, the creation of email templates, technical support Q & As, bug reporting procedures and acted as the main liaison between the CS department and the technical and Biz Dev departments."
 	}
   ]
-}
+};
 
 
 work.display = function(){
@@ -127,15 +133,21 @@ work.display = function(){
 
 
 work.display ();
-
-
-
 //end of code for work section
 
 
 // code for education section
 var education = { 
 	"schools": [
+	{
+	 	"name": "Udacity Online University",
+	 	"location": "Mountain View, CA, US",
+	 	"degree": "",
+	 	"major": "Front-End Web Development",
+	 	"dates" : "Currently Completing",
+	 	"url" : "http://example.com"
+	},
+
 	{
 	 	"name": "State University of New York - Empire Sate College",
 	 	"location": "New York, NY",
@@ -167,8 +179,7 @@ var education = {
 	 	"major": "Ancient Greek History and Culture",
 	 	"dates" : "",
 	 	"url" : "http://example.com"
-	}
-    ],
+	}],
     "onlineCourses": [
     {
   		"title" : "Front-End Web Devoloper Nanodegree",
@@ -189,7 +200,7 @@ var education = {
   		"url" : "https://www.udemy.com/build-website-scratch/learn/#/",
   	}
   ]
-}
+};
 
 
 education.display = function(){
@@ -215,39 +226,42 @@ education.display = function(){
 
 education.display ();
 
-// end code for edcuation section
+// End code for edcuation section
 
-// code online classes
+/* Code online classes - ran into nasty bug in this section. 
+For the time being put in regular ecucation section, 
+will revist later as my skills improve.*/ 
 
-education.onlineCourses.display = function(){
+/*education.onlineCourses.display = function(){
 	$("#education").append(HTMLonlineClasses);
 
-	for (course in education.onlineCourses) {
+	if(education.onlineCourses.length) {
+	for (onlineCourse in education.onlineCourses) {
 		$("#education").append(HTMLschoolStart);
 
-		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
 		$(".education-entry:last").append(formattedonlineTitle);	
-		var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+		
+		var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
 		$(".education-entry:last").append(formattedonlineSchool);	
-		var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
+		
+		var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
 		$(".education-entry:last").append(formattedonlineDates);	
-		var formattedOnlineurl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-		$(".education-entry:last").append(formattedOnlineurl);
+		
+		var formattedOnlineurl = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+		$(".education-entry:last").append(formattedOnlineurl)	;
 
 	}
+  }	
 }
 
 
-education.onlineCourses.display();
-// end code line classes
+education.onlineCourses.display();/*
+// End code line classes
 
 
 
-
-
-
-// code for further education
-
+// Code for further education. As my skills improve I will add to this section as a read more.
 /*var furtherEducation = { 
 	"schools": [
 	{
@@ -270,14 +284,9 @@ education.onlineCourses.display();
 	}
   ]
 }*/
-
-
-
-
-
 // end code further education
 
-//code for projects section
+//Code for projects section
 var projects = {
  "projects": [
   	{
@@ -285,8 +294,10 @@ var projects = {
   		"dates" : "2015",
   		"description" : "This is portfolio website was made from scrach. All of the HTML and CSS was hand coded. Though a Bootstrap framework was eventually overlaid, all the initial framing was coded manually. All images are my own work.",
   		"images" : [
+  		  "images/project-1-8.jpg",
   		  "images/project-1-3.jpg",
-  		  "images/project-1-2.jpg"	
+  		  "images/project-1-2.jpg"
+  		  
   		]
   	},
   	{
@@ -294,8 +305,9 @@ var projects = {
   		"dates" : "2016",
   		"description" : "Prepare to have you mind blown in 2016. In the mean time enjoy these images.",
   		"images" : [
+  		  "images/project-1-9.jpg",
   		  "images/turtle-portfolio.jpg",
-  		  "images/project-1-4.jpg"	
+  		  "images/project-1-4.jpg"
   		]
   	},
   	{
@@ -303,12 +315,13 @@ var projects = {
   		"dates" : "2016",
   		"description" : "Prepare to have you mind blown in 2016. In the mean time enjoy these images.",
   		"images" : [
-  		  "images/project-1-6.jpg",
-  		  "images/project-1-7.jpg"	
+  		  "images/project-1-7.jpg",
+  		  "images/project-1-5.jpg",	
+  		  "images/project-1-6.jpg"
   		]
   	}
   ]
-}
+};
 
 projects.display = function(){
 	for (project in projects.projects){
@@ -336,7 +349,9 @@ projects.display ();
 //end of projects section
 
 
-// code for internationalizeButton
+/* Code for internationalizeButton/ I don't like this feature so 
+I deactivated the code, but left it in, in case it is part of the final
+evaluation. 
 function inName(formattedName) {
 	name = name.trim().split (" ");
 	console.log(name);
@@ -347,7 +362,7 @@ function inName(formattedName) {
 }
 
 $('#main').append(internationalizeButton);
-// end code of internationalizeButton
+End code of internationalizeButton*/
 
 // code to append googleMaps
 $("#mapDiv").append(googleMap);
