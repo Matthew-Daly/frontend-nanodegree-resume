@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 24px;
   color: #e50914;
   line-height: 29px;
@@ -142,10 +142,10 @@ a {
   color: #8a8989;
   font-weight: bold;
   font-weight: 700;
-  
+
 }
 
-/*work block*/
+/*work education block*/
 .gray {
   background-color: #f8f5f2;
   padding: 10px;
@@ -159,8 +159,7 @@ a {
  .projects.images{
   text-align: center;
 }
-/* TODO: Replace with image later */
-/*#header {}*/
+
 
 .flex-box {
   color: #505160;
