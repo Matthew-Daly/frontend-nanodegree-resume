@@ -16,9 +16,12 @@ h6 {
 
 
 body {
+  margin:0;
+  padding: 0;
   background-color: #030202;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
   font-family: Helvetica, Arial, sans-serif;
-  padding: 20px 0px 20px 0px;
 }
 
 .clear-fix {
@@ -41,8 +44,8 @@ h1 {
 }
 
 h2 {
-  font-weight: normal;
-  font-size: 24px;
+  font-weight: lighter;
+  font-size: 20px;
   color: #e50914;
   line-height: 29px;
   padding: 10px;
@@ -50,12 +53,13 @@ h2 {
 
 
 h3 {
-  font-style: bold;
-  font-size: 24px;
+  font-style: lighter;
+  font-size: 20px;
   color: #141414;
   line-height: 29px;
   padding: 10px;
 }
+
 
 h4 {
   font-size: bold;
@@ -71,6 +75,20 @@ h5 {
 
 }
 
+
+#topNav {
+  background-color: #101010;
+  margin: 0;
+  height: 40px;
+
+}
+
+.topMenu{
+  color: #545454;
+  font-style: normal;
+  font-size: 12px;
+
+}
 
 .date-text {
   font-style: normal;
@@ -153,16 +171,22 @@ a {
 }
 
 .dark-gray {
-  background-color: #505160;
+  background-color: #101010;
 }
 
- .projects.images{
-  text-align: center;
-}
 
+.flex-box1 {
+  color: #505160;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0px 0px 10px 0px;
+}
 
 .flex-box {
-  color: #505160;
+  color: #141414;
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
@@ -201,7 +225,7 @@ color: #000;
 }
 
 #lets-connect {
-  color: #000;
+  padding-top: 10px;
   text-align: center;
 }
 

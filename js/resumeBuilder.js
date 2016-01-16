@@ -1,5 +1,3 @@
-'Use Strict';
-
 // Code for bio section
 var bio = {
 	"name" : "Matthew Daly",
@@ -19,64 +17,49 @@ var bio = {
 		"English - native", "Thai - upper intermediate", "German - functional"
 	],
 	"biopic" : "images/Matt-flood.jpg"
-}	
+};
 
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").prepend(formattedName);
-var bioPic = HTMLbioPic.replace("%data%", "images/matt.jpg");
-$("#header").append(bioPic);
-var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedwelcomeMsg);
-var formmatedMobile= HTMLmobile.replace("%data%", bio.contacts.mobile); 
-$("#topContacts").append(formmatedMobile);
-$("#footerContacts").append(formmatedMobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(formattedEmail);
-$("#footerContacts").append(formattedEmail);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").append(formattedGithub);
-$("#footerContacts").append(formattedGithub);
-var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twiter);
-$("#topContacts").append(formattedTwitter);
-$("#footerContacts").append(formattedTwitter);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").append(formattedLocation);
+bio.display = function(){
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#header").prepend(formattedRole);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	$("#header").prepend(formattedName);
+	var bioPic = HTMLbioPic.replace("%data%", "images/matt.jpg");
+	$("#header").append(bioPic);
+	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header").append(formattedwelcomeMsg);
+	var formmatedMobile= HTMLmobile.replace("%data%", bio.contacts.mobile);
+	$("#topContacts").append(formmatedMobile);
+	$("#footerContacts").append(formmatedMobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	$("#topContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedEmail);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	$("#topContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedGithub);
+	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twiter);
+	$("#topContacts").append(formattedTwitter);
+	$("#footerContacts").append(formattedTwitter);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	$("#topContacts").append(formattedLocation);
 
+};
 
+bio.display();
 
-if(bio.skills.length > 0) {
-
-	$("#header").append(HTMLskillsStart);
-
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+//skills
+$("#header").append(HTMLskillsStart);
+for (var i in bio.skills) {
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[7]);
-	
+};
 
-
-	$("#header").append(HTMLlanguagesStart);
-
-	var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages[0]);
+//languages
+$("#header").append(HTMLlanguagesStart);
+for (var i in bio.languages) {
+	var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages[i]);
 	$("#languages").append(formattedLanguages);
-	var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages[1]);
-	$("#languages").append(formattedLanguages);
-	var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages[2]);
-	$("#languages").append(formattedLanguages);	
-}
+};
 
 // End code for bio
 
@@ -90,21 +73,21 @@ var work = {
 	  	"location" : "San Diego, California (though I worked remotely)",
 	  	"description" : "Vested Partner in travel crowdfunding site. Collaborated from its initial research and development phase, through core team assembly, to the building of a fully functioning proof	of concept website. Led a team in the creation of all related company content, including branding copy, blogging, press releases, as well as contributed to the fundamental business plan and company mission statement. Unfortunately the project failed to secure initial funding - we fought the good fight, but lost."
 	},
-	{	
+	{
 	  	"employer" : "Dara Academy/Wat Parinayok School",
 	  	"title" : "Teacher/Program Administrator ",
 	  	"dates" : "May 2006 - March 2015",
 	  	"location" : "Chiang Mai/Bangkok, Thailand",
 	  	"description" : "Developed and administered various programs and curricula across multiple grade levels (K-12). Was part of a team responsible for the creation of an intensive English language program for young learners that won the King's Award for Academic Excellence. Successfully worked and excelled in an environment that demanded the highest levels of cross-cultural awareness and adaptability."
 	},
-	{	
+	{
 	  	"employer" : "A.G.A.S. Manufacturing Group",
 	  	"title" : "Sales Manager",
 	  	"dates" : "Feb 2003 - Jan 2006",
 	  	"location" : "New York, NY",
 	  	"description" : "Increased gross US sales by 14% during my tenure. Instituted new quality control and shipping processes that saw a marked decrease in returns and cancelled orders. Oversaw the creation of a retail website, opening new revenue sources. Through training and operational protocols, decreased customer response times from 20min to 5min. "
 	},
-	{	
+	{
 	  	"employer" : "SquareTrade",
 	  	"title" : "Lead Customer Service Represenative",
 	  	"dates" : "Feb 2000 - Dec 2002",
@@ -118,7 +101,7 @@ var work = {
 work.display = function(){
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace ("%data%", work.jobs[job].employer);	
+		var formattedEmployer = HTMLworkEmployer.replace ("%data%", work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace ("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
@@ -129,7 +112,7 @@ work.display = function(){
 		var formattedworkDescription =HTMLworkDescription.replace ("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedworkDescription);
 		}
-}
+};
 
 
 work.display ();
@@ -137,7 +120,7 @@ work.display ();
 
 
 // code for education section
-var education = { 
+var education = {
 	"schools": [
 	{
 	 	"name": "Udacity Online University",
@@ -206,9 +189,9 @@ var education = {
 education.display = function(){
 	for (school in education.schools) {
 	$("#education").append(HTMLschoolStart);
-		
 
-		var formattedschoolName = HTMLschoolName.replace ("%data%", education.schools[school].name);	
+
+		var formattedschoolName = HTMLschoolName.replace ("%data%", education.schools[school].name);
 		$(".education-entry:last").append(formattedschoolName);
 		var formattedschoolDegree = HTMLschoolDegree.replace ("%data%", education.schools[school].degree);
 		$(".education-entry:last").append(formattedschoolDegree);
@@ -220,73 +203,15 @@ education.display = function(){
 		$(".education-entry:last").append(formattedschoolMajor);
 
 	}
-	    
-}
+
+};
 
 
 education.display ();
 
 // End code for edcuation section
 
-/* Code online classes - ran into nasty bug in this section. 
-For the time being put in regular ecucation section, 
-will revist later as my skills improve.*/ 
 
-/*education.onlineCourses.display = function(){
-	$("#education").append(HTMLonlineClasses);
-
-	if(education.onlineCourses.length) {
-	for (onlineCourse in education.onlineCourses) {
-		$("#education").append(HTMLschoolStart);
-
-		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-		$(".education-entry:last").append(formattedonlineTitle);	
-		
-		var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-		$(".education-entry:last").append(formattedonlineSchool);	
-		
-		var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
-		$(".education-entry:last").append(formattedonlineDates);	
-		
-		var formattedOnlineurl = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
-		$(".education-entry:last").append(formattedOnlineurl)	;
-
-	}
-  }	
-}
-
-
-education.onlineCourses.display();/*
-// End code line classes
-
-
-
-// Code for further education. As my skills improve I will add to this section as a read more.
-/*var furtherEducation = { 
-	"schools": [
-	{
-	 	"organization": "American Conservatory Theater",
-	 	"location": "London",
-	 	"outcome": "COC - Summer Training Congress",
-	 	"field": "Acting"
-	},
-	{
-	 	"organization": "University of Maryland",
-	 	"location": "Tokyo",
-	 	"outcome": "Four Month Study Tour; 4 upper level credits towards degree",
-	 	"field": "Ancient Egyption History"
-	},
-	{
-	 	"organization": "University of Maryland",
-	 	"location": "Beijing",
-	 	"outcome": "Two Month Study Tour; 4 upper level credits towards degree",
-	 	"field": "Chinese History and Culture"
-	}
-  ]
-}*/
-// end code further education
-
-//Code for projects section
 var projects = {
  "projects": [
   	{
@@ -297,7 +222,7 @@ var projects = {
   		  "images/project-1-8.jpg",
   		  "images/project-1-3.jpg",
   		  "images/project-1-2.jpg"
-  		  
+
   		]
   	},
   	{
@@ -316,7 +241,7 @@ var projects = {
   		"description" : "Prepare to have you mind blown in 2016. In the mean time enjoy these images.",
   		"images" : [
   		  "images/project-1-7.jpg",
-  		  "images/project-1-5.jpg",	
+  		  "images/project-1-5.jpg",
   		  "images/project-1-6.jpg"
   		]
   	}
@@ -343,26 +268,30 @@ projects.display = function(){
 			}
 		}
 	}
-}
+};
 
 projects.display ();
 //end of projects section
 
+//Uses jQuery plugin "Sticky" to stick the top navigation to the top of the page when scrolling down, and unsticks when scroll up
+ $(document).ready(function() {
+    $("#topNav").sticky({topSpacing:0});
+ });
 
-/* Code for internationalizeButton/ I don't like this feature so 
-I deactivated the code, but left it in, in case it is part of the final
-evaluation. 
-function inName(formattedName) {
-	name = name.trim().split (" ");
-	console.log(name);
-	name[1] = name[1].toUpperCase();
-	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
 
-	return name [0] +" "+name[1];
-}
+//Automatically scrolls to element when clicked on the top navigation
+$('a[href^="#"]').on('click', function(event) {
 
-$('#main').append(internationalizeButton);
-End code of internationalizeButton*/
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
 
 // code to append googleMaps
 $("#mapDiv").append(googleMap);
