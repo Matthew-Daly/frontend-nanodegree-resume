@@ -46,7 +46,6 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var HTMLfurtherEducationStart = '<div class="education-entry"></div>';
 var HTMLorganizationName = '<a href="#">%data%';
-var HTMLfurtherEducationLocation = '<div class="location-text">%data%</div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -107,11 +106,24 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
+
+
     locations.push(bio.contacts.location);
 
+    furtherGigs.gigs.forEach(function(gig){
+      locations.push(gig.location);
+    });
 
+    furtherEducation.opportunities.forEach(function(op){
+      locations.push(op.location);
+    });
 
-    // iterates through school locations and appends each location to
+    // iterates through work locations and appends each location to
+    // the locations array. Note that forEach is used for array iteration
+    // as described in the Udacity FEND Style Guide:
+    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+
+   // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
@@ -119,14 +131,10 @@ function initializeMap() {
       locations.push(school.location);
     });
 
-    // iterates through work locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+
     work.jobs.forEach(function(job){
       locations.push(job.location);
     });
-
 
     return locations;
   }

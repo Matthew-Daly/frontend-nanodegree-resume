@@ -63,6 +63,7 @@ for (var i in bio.languages) {
 
 // End code for bio
 
+
 //Code for work section
 var work = {
  "jobs": [
@@ -70,7 +71,7 @@ var work = {
 	  	"employer" : "TripDonor/TravelGenie",
 	  	"title" : "Content Manager",
 	  	"dates" : "Dec 2014 - Aug 2015",
-	  	"location" : "San Diego, California (though I worked remotely)",
+	  	"location" : "San Diego, California",
 	  	"description" : "Vested Partner in travel crowdfunding site. Collaborated from its initial research and development phase, through core team assembly, to the building of a fully functioning proof	of concept website. Led a team in the creation of all related company content, including branding copy, blogging, press releases, as well as contributed to the fundamental business plan and company mission statement. Unfortunately the project failed to secure initial funding - we fought the good fight, but lost."
 	},
 	{
@@ -127,17 +128,14 @@ var education = {
 	 	"location": "Mountain View, CA, US",
 	 	"degree": "",
 	 	"major": "Front-End Web Development",
-	 	"dates" : "Currently Completing",
-	 	"url" : "http://example.com"
+	 	"dates" : "Currently Completing"
 	},
-
 	{
 	 	"name": "State University of New York - Empire Sate College",
 	 	"location": "New York, NY",
 	 	"degree": "BA",
 	 	"major": "World History",
-	 	"dates" : "",
-	 	"url" : "http://example.com"
+	 	"dates" : ""
 	},
 	{
 	 	"name": "University of Maryland European Division",
@@ -145,7 +143,6 @@ var education = {
 	 	"degree": "AA",
 	 	"major": "Theater Arts",
 	 	"dates" : "",
-	 	"url" : "http://example.com"
 	},
 	{
 	 	"name": "Payap University",
@@ -153,7 +150,6 @@ var education = {
 	 	"degree": "COC",
 	 	"major": "Thai Language and Culture",
 	 	"dates" : "",
-	 	"url" : "http://example.com"
 	},
 	{
 	 	"name": "Deree American College of Greece",
@@ -161,27 +157,7 @@ var education = {
 	 	"degree": "COC, one year program",
 	 	"major": "Ancient Greek History and Culture",
 	 	"dates" : "",
-	 	"url" : "http://example.com"
-	}],
-    "onlineCourses": [
-    {
-  		"title" : "Front-End Web Devoloper Nanodegree",
-  		"school" : "Udacity",
-  		"date" : "2016",
-  		"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
-  	},
-  	{
-  		"title" : "Command Line Essentials: Git Bash for Windows",
-  		"school" : "udemy",
-  		"date" : "2015",
-  		"url" : "https://www.udemy.com/git-bash/learn/#/",
-  	},
-  	{
-  		"title" : "Build Websites from Scratch with HTML & CSS",
-  		"school" : "udemy",
-  		"date" : "2015",
-  		"url" : "https://www.udemy.com/build-website-scratch/learn/#/",
-  	}
+	}
   ]
 };
 
@@ -272,6 +248,45 @@ projects.display = function(){
 
 projects.display ();
 //end of projects section
+
+//further info - this information is designed to appear on the map, but not in the resume, hence no display function
+var furtherGigs = {
+  "gigs": [
+	{
+	  	"employer" : "Halibut Fishery",
+	  	"title" : "Deckhand",
+	  	"dates" : " ",
+	  	"location" : "Seward, Alaska",
+	  	"description" : "Spend a season working as a deckhand on a Halibut boat."
+	}
+  ]
+};
+
+
+var furtherEducation = {
+	"opportunities":[
+	{
+		"name": "University of Maryland European Division",
+	 	"location": "Cairo, Egypt",
+	 	"field of study": "Ancient Egyptian History",
+	 	"description" : "Four Month Study Tour through Egypt"
+	},
+	{
+		"name": "University of Maryland European Division",
+	 	"location": "Beijing, China",
+	 	"field of study": "Chinese history and culture",
+	 	"description" : "Two Month Study Tour through China"
+	},
+	{
+		"name": "University of Maryland European Division",
+	 	"location": "Keflavik, Iceland",
+	 	"feild of study": " ",
+	 	"description" : "Spend a year studying at UMUC's Keflavik annex."
+	}
+	]
+};
+
+//end further info
 
 //Uses jQuery plugin "Sticky" to stick the top navigation to the top of the page when scrolling down, and unsticks when scroll up
  $(document).ready(function() {
