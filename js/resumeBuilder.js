@@ -43,24 +43,23 @@ bio.display = function(){
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedLocation);
 
+	//skills
+	$("#header").append(HTMLskillsStart);
+	for (var i in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+		$("#skills").append(formattedSkill);
+	};
+
+	//languages
+	$("#header").append(HTMLlanguagesStart);
+	for (var i in bio.languages) {
+		var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages[i]);
+		$("#languages").append(formattedLanguages);
+	};
 };
+
 
 bio.display();
-
-//skills
-$("#header").append(HTMLskillsStart);
-for (var i in bio.skills) {
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-	$("#skills").append(formattedSkill);
-};
-
-//languages
-$("#header").append(HTMLlanguagesStart);
-for (var i in bio.languages) {
-	var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages[i]);
-	$("#languages").append(formattedLanguages);
-};
-
 // End code for bio
 
 
