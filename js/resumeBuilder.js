@@ -99,7 +99,7 @@ var work = {
 
 
 work.display = function(){
-	for (job in work.jobs) {
+	for (var job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		var formattedEmployer = HTMLworkEmployer.replace ("%data%", work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace ("%data%", work.jobs[job].title);
@@ -127,14 +127,16 @@ var education = {
 	 	"location": "Mountain View, CA, US",
 	 	"degree": "",
 	 	"major": "Front-End Web Development",
-	 	"dates" : "Currently Completing"
+	 	"dates" : "Currently Completing",
+	 	"url" : "http://example.com"
 	},
 	{
 	 	"name": "State University of New York - Empire Sate College",
 	 	"location": "New York, NY",
 	 	"degree": "BA",
 	 	"major": "World History",
-	 	"dates" : ""
+	 	"dates" : "",
+	 	"url" : "http://example.com"
 	},
 	{
 	 	"name": "University of Maryland European Division",
@@ -142,6 +144,7 @@ var education = {
 	 	"degree": "AA",
 	 	"major": "Theater Arts",
 	 	"dates" : "",
+	 	"url" : "http://example.com"
 	},
 	{
 	 	"name": "Payap University",
@@ -149,6 +152,7 @@ var education = {
 	 	"degree": "COC",
 	 	"major": "Thai Language and Culture",
 	 	"dates" : "",
+	 	"url" : "http://example.com"
 	},
 	{
 	 	"name": "Deree American College of Greece",
@@ -156,13 +160,33 @@ var education = {
 	 	"degree": "COC, one year program",
 	 	"major": "Ancient Greek History and Culture",
 	 	"dates" : "",
-	}
+	 	"url" : "http://example.com"
+	}],
+    "onlineCourses": [
+    {
+  		"title" : "Front-End Web Devoloper Nanodegree",
+  		"school" : "Udacity",
+  		"date" : "2016",
+  		"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+  	},
+  	{
+  		"title" : "Command Line Essentials: Git Bash for Windows",
+  		"school" : "udemy",
+  		"date" : "2015",
+  		"url" : "https://www.udemy.com/git-bash/learn/#/"
+  	},
+  	{
+  		"title" : "Build Websites from Scratch with HTML & CSS",
+  		"school" : "udemy",
+  		"date" : "2015",
+  		"url" : "https://www.udemy.com/build-website-scratch/learn/#/"
+  	}
   ]
 };
 
 
 education.display = function(){
-	for (school in education.schools) {
+	for (var school in education.schools) {
 	$("#education").append(HTMLschoolStart);
 
 
@@ -185,6 +209,8 @@ education.display = function(){
 education.display ();
 
 // End code for edcuation section
+
+
 
 
 var projects = {
@@ -224,7 +250,7 @@ var projects = {
 };
 
 projects.display = function(){
-	for (project in projects.projects){
+	for (var project in projects.projects){
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedTitle = HTMLprojectTitle.replace ("%data%", projects.projects[project].title);
