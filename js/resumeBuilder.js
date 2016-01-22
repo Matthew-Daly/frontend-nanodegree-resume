@@ -16,7 +16,7 @@ var bio = {
 	"languages": [
 		"English - native", "Thai - upper intermediate", "German - functional"
 	],
-	"biopic" : "images/Matt-flood.jpg"
+	"biopic" : "images/Matt.jpg"
 };
 
 bio.display = function(){
