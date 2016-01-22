@@ -1,0 +1,275 @@
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+
+body {
+  margin:0;
+  padding: 0;
+  background-color: #030202;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+.education-entry,
+.work-entry,
+.project-entry{
+  padding: 0 5%;
+}
+
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #e50914;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 20px;
+  color: #e50914;
+  line-height: 29px;
+  padding: 10px;
+}
+
+
+h3 {
+  font-style: lighter;
+  font-size: 20px;
+  color: #141414;
+  line-height: 29px;
+  padding: 10px;
+}
+
+
+h4 {
+  font-size: bold;
+  font-weight: normal;
+  font-size: 14px;
+  color: #e96a09;
+  line-height: 17px;
+}
+
+
+h5 {
+  padding:10px 5%;
+
+}
+
+
+#topNav {
+  background-color: #101010;
+  margin: 0;
+  height: 40px;
+
+}
+
+.topMenu{
+  color: #545454;
+  font-style: normal;
+  font-size: 12px;
+
+}
+
+.date-text {
+  font-style: normal;
+  font-size: 14px;
+  color: #778899;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: normal;
+  font-size: 14px;
+  color: #808080;
+  line-height: 16px;
+  float: right;
+
+}
+
+p {
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 40px;
+  color: #101010;
+  line-height: 21px;
+}
+
+p.pro-text {
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 40px;
+  color: #f8f1e5;
+  line-height: 21px;
+}
+
+a {
+  color: #2f4f4f;
+  font-size: 17px;
+  font-size: bold;
+  font-weight: 50;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.welcome-message {
+  font-style: bold;
+  font-weight: 700;
+  font-size: 18px;
+  color: #e96a09;
+  line-height: 28px;
+}
+
+#skills-h3 {
+  color: #fffcf0;
+  display: none;
+  font-size: 14px;
+}
+
+
+.orange {
+  background-color: #999;
+}
+
+.orange-text {
+  color: #fffcf0;
+}
+
+.white-text {
+  color: #8a8989;
+  font-weight: bold;
+  font-weight: 700;
+
+}
+
+/*work education block*/
+.gray {
+  background-color: #f8f5f2;
+  padding: 10px;
+  clear:both;
+}
+
+.dark-gray {
+  background-color: #101010;
+}
+
+
+.flex-box1 {
+  color: #505160;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0px 0px 10px 0px;
+}
+
+.flex-box {
+  color: #141414;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 300px;
+  display: none;
+}
+
+img {
+  padding: 10px;
+}
+
+span {
+  color: #fff;
+  padding: 5px;
+}
+
+hr {
+color: #000;
+
+}
+
+#lets-connect {
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
+}
