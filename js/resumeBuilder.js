@@ -16,7 +16,7 @@ var bio = {
     "languages": [
         "English - native", "Thai - upper intermediate", "German - functional"
     ],
-    "biopic": "images/Matt-flood.jpg"
+    "biopic": "images/Matt.jpg"
 };
 
 bio.display = function() {
@@ -24,7 +24,7 @@ bio.display = function() {
     $("#header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedName);
-    var bioPic = HTMLbioPic.replace("%data%", "images/matt.jpg");
+    var bioPic = HTMLbioPic.replace("%data%", "images/Matt.jpg");
     $("#header").append(bioPic);
     var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedwelcomeMsg);
