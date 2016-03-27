@@ -24,7 +24,7 @@ bio.display = function() {
     $("#header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedName);
-    var bioPic = HTMLbioPic.replace("%data%", "images/Matt.jpg");
+    var bioPic = HTMLbioPic.replace("%data%", "images/Matt-flood.jpg");
     $("#header").append(bioPic);
     var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedwelcomeMsg);
@@ -210,7 +210,7 @@ var projects = {
     }, {
         "title": "Coming Soon!",
         "dates": "2016",
-        "description": "Prepare to have you mind blown in 2016. In the mean time enjoy these images.",
+        "description": "Prepare to have you mind blown in 2016. In the meantime enjoy these images.",
         "images": [
             "images/project-1-9.jpg",
             "images/turtle-portfolio.jpg",
@@ -219,7 +219,7 @@ var projects = {
     }, {
         "title": "Coming Soon!",
         "dates": "2016",
-        "description": "Prepare to have you mind blown in 2016. In the mean time enjoy these images.",
+        "description": "Prepare to have you mind blown in 2016. In the meantime enjoy these images.",
         "images": [
             "images/project-1-7.jpg",
             "images/project-1-5.jpg",
