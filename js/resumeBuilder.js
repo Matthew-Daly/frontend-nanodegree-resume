@@ -4,7 +4,7 @@ var bio = {
     "role": "Web Developer",
     "contacts": {
         "mobile": "(66) 0823328402",
-        "email": "sfhillhouse@gmail.com",
+        "email": "matthew.daly40@gmail.com",
         "github": "Matthew-Daly",
         "twiter": "@Dalysfhillhouse",
         "location": "Chiang Mai, Thailand"
@@ -16,7 +16,7 @@ var bio = {
     "languages": [
         "English - native", "Thai - upper intermediate", "German - functional"
     ],
-    "biopic": "images/Matt.jpg"
+    "biopic": "images/Matt-flood.jpg"
 };
 
 bio.display = function() {
