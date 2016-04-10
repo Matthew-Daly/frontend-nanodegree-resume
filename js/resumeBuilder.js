@@ -11,7 +11,7 @@ var bio = {
     },
     "welcomeMessage": "Hi, I'm Matthew and I want to make cool things with cool people.",
     "skills": [
-        "HTML/CSS - beginner", "JavaScript - beginner", "writing", "teaching", "sales", "customer relations", "good understanding of SEO", "Git"
+        "HTML/CSS - proficient", "JavaScript - proficient", "writing", "teaching", "sales", "customer relations", "good understanding of SEO", "Git"
     ],
     "languages": [
         "English - native", "Thai - upper intermediate", "German - functional"
