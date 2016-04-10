@@ -29,7 +29,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="http://matthew-daly.github.io/learningtowalk/">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data% </div><br>';
 var HTMLprojectDescription = '<p class="pro-text">%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<a href="http://matthew-daly.github.io/learningtowalk/"><img src="%data%"></a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
