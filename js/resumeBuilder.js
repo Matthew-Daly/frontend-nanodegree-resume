@@ -201,7 +201,7 @@ var projects = {
         "title": "Handmade Portfolio Website",
         "dates": "2015",
         "description": "This is portfolio website was made from scrach. All of the HTML and CSS was hand coded. Though a Bootstrap framework was eventually overlaid, all the initial framing was coded manually. All images are my own work.",
-        images": [
+        "images": [
             "images/project-1-8.jpg",
             "images/project-1-3.jpg",
             "images/project-1-2.jpg"
