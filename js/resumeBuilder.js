@@ -202,7 +202,7 @@ var projects = {
         "dates": "2015",
         "description": "This is portfolio website was made from scrach. All of the HTML and CSS was hand coded. Though a Bootstrap framework was eventually overlaid, all the initial framing was coded manually. All images are my own work.",
         images": [
-            <a href="http://matthew-daly.github.io/learningtowalk/">"images/project-1-8.jpg"</a>,
+            "images/project-1-8.jpg",
             "images/project-1-3.jpg",
             "images/project-1-2.jpg"
         ]
