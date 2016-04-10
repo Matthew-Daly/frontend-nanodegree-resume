@@ -26,7 +26,7 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="http://matthew-daly.github.io/frontend-nanodegree-resume/">%data%</a>';
+var HTMLprojectTitle = '<a href="http://matthew-daly.github.io/learningtowalk/">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data% </div><br>';
 var HTMLprojectDescription = '<p class="pro-text">%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
