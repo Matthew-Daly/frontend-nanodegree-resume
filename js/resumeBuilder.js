@@ -212,9 +212,9 @@ var projects = {
         "dates": "2016",
         "description": "Prepare to have you mind blown in 2016. In the meantime enjoy these images.",
         "images": [
-            "images/project-1-9.jpg",
-            "images/turtle-portfolio.jpg",
-            "images/project-1-4.jpg"
+            <a href="http://matthew-daly.github.io/learningtowalk/">"images/project-1-9.jpg"</a>,
+            <a href="http://matthew-daly.github.io/learningtowalk/""images/turtle-portfolio.jpg"</a>,
+            <a href="http://matthew-daly.github.io/learningtowalk/""images/project-1-4.jpg"</a>
         ]
     }, {
         "title": "Coming Soon!",
