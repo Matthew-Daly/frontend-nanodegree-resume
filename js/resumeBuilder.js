@@ -201,7 +201,7 @@ var projects = {
         "title": "Handmade Portfolio Website",
         "dates": "2015",
         "description": "This is portfolio website was made from scrach. All of the HTML and CSS was hand coded. Though a Bootstrap framework was eventually overlaid, all the initial framing was coded manually. All images are my own work.",
-        "images": [
+        <a href="http://matthew-daly.github.io/learningtowalk/""images"</a>: [
             "images/project-1-8.jpg",
             "images/project-1-3.jpg",
             "images/project-1-2.jpg"
@@ -212,9 +212,9 @@ var projects = {
         "dates": "2016",
         "description": "Prepare to have you mind blown in 2016. In the meantime enjoy these images.",
         "images": [
-            <a href="http://matthew-daly.github.io/learningtowalk/">"images/project-1-9.jpg"</a>,
-            <a href="http://matthew-daly.github.io/learningtowalk/""images/turtle-portfolio.jpg"</a>,
-            <a href="http://matthew-daly.github.io/learningtowalk/""images/project-1-4.jpg"</a>
+            "images/project-1-9.jpg",
+            "images/turtle-portfolio.jpg",
+            "images/project-1-4.jpg"
         ]
     }, {
         "title": "Coming Soon!",
